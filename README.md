@@ -1,8 +1,10 @@
 # README.md
 
-![Metrics](https://metrics.lecoq.io/loganbek?template=classic&config.timezone=America%2FLos_Angeles)
+[![Metrics](https://github.com/loganbek/loganbek/actions/workflows/main.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/main.yml)
 
 <!-- ### Hi there 👋 -->
+
+<!-- ![Metrics](https://metrics.lecoq.io/loganbek?template=classic&config.timezone=America%2FLos_Angeles) -->
 
 <!--
 **loganbek/loganbek** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
