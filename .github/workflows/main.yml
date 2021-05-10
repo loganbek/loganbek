@@ -22,7 +22,7 @@ jobs:
           base: header, activity, community, repositories, metadata
           # extra_css: # TODO inject css rules
           config_timezone: America/Los_Angeles # supported - https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-          # config_order: base.header, isocalendar, languages, stars # TODO ordering
+          # config_order: base.header, isocalendar, languages, stars # TODO plugin ordering
           config_twemoji: yes
 
           # 🏆 Achievements
@@ -65,3 +65,9 @@ jobs:
           # 🌟 Recently starred repositories
           plugin_stars: yes
           plugin_stars_limit: 10 # Limit to 10 entries was 4
+
+          plugin_music: yes
+          plugin_music_limit: 10 # Limit to 4 entries
+          plugin_music_playlist: https://open.spotify.com/embed/playlist/2vPimjh2yzu3rplv1vbSbM # Use extracted playlist link
+          # (plugin_music_provider and plugin_music_mode will be set automatically)
+          # <iframe src="" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
