@@ -12,14 +12,18 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          # Your GitHub token
-          token: ${{ secrets.METRICS_TOKEN }}
-
-          # Options
+          # 🧱 Core
+          token: ${{ secrets.METRICS_TOKEN }} # Your GitHub token
           user: loganbek
+          # repo: loganbek # for repo specific metrics
           template: classic
+
+          # 🗃️ Base content
           base: header, activity, community, repositories, metadata
-          config_timezone: America/San_Francisco
+          # extra_css: # TODO inject css rules
+          config_timezone: America/Los_Angeles # supported - https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+          # config_order: base.header, isocalendar, languages, stars # TODO ordering
+          config_twemoji: yes
 
           # 🏆 Achievements
           plugin_achievements: yes
