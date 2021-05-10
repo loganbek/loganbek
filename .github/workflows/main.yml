@@ -2,10 +2,10 @@
 name: Metrics
 on:
   # Schedule updates (each hour)
-  schedule: [{cron: "0 * * * *"}]
+  schedule: [{ cron: '0 * * * *' }]
   # Lines below let you run workflow manually and on each commit
   workflow_dispatch:
-  push: {branches: ["master", "main"]}
+  push: { branches: ['master', 'main'] }
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -20,46 +20,44 @@ jobs:
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: America/San_Francisco
-          
-          # TODO ordering
-          
+
           # 🏆 Achievements
           plugin_achievements: yes
-          plugin_achievements_threshold: C       # Display achievements with rank B or higher
-          plugin_achievements_secrets: yes       # Display unlocked secrets achievements
-          plugin_achievements_ignored: octonaut  # Hide octonaut achievement
-          plugin_achievements_limit: 0           # Display all unlocked achievement matching threshold and secrets params
-          
+          plugin_achievements_threshold: C # Display achievements with rank B or higher
+          plugin_achievements_secrets: yes # Display unlocked secrets achievements
+          plugin_achievements_ignored: octonaut # Hide octonaut achievement
+          plugin_achievements_limit: 0 # Display all unlocked achievement matching threshold and secrets params
+
           # 🎟️ Follow-up of issues and pull requests
           plugin_followup: yes
           plugin_followup_sections: repositories
-          
+
           # 🙋 Introduction
           plugin_introduction: yes
           plugin_introduction_title: yes
-          
+
           # 💡 Coding habits
           plugin_habits: yes
-          plugin_habits_from: 200                 # Use 200 events to compute habits
-          plugin_habits_days: 14                  # Keep only events from last 14 days
-          plugin_habits_facts: yes                # Display facts section
-          plugin_habits_charts: yes               # Display charts section
-          
+          plugin_habits_from: 200 # Use 200 events to compute habits
+          plugin_habits_days: 14 # Keep only events from last 14 days
+          plugin_habits_facts: yes # Display facts section
+          plugin_habits_charts: yes # Display charts section
+
           # 🈷️ Most used languages
           # TODO plugin_languages_skipped: my-test-repo
           plugin_languages: yes
-          plugin_languages_colors: rainbow        # TODO customize was github
+          plugin_languages_colors: rainbow # TODO customize was github
           plugin_languages_limit: 8
           plugin_languages_threshold: 0%
           plugin_languages_skipped: ruby
-          
+
           # � Repository contributors
           plugin_contributors: yes
-          plugin_contributors_base: ""            # Base reference (commit, tag, branch, etc.)
-          plugin_contributors_head: master        # Head reference (commit, tag, branch, etc.)
-          plugin_contributors_ignored: bot        # Ignore "bot" user
-          plugin_contributors_contributions: yes  # Display number of contributions for each contributor
-          
+          plugin_contributors_base: '' # Base reference (commit, tag, branch, etc.)
+          plugin_contributors_head: master # Head reference (commit, tag, branch, etc.)
+          plugin_contributors_ignored: bot # Ignore "bot" user
+          plugin_contributors_contributions: yes # Display number of contributions for each contributor
+
           # 🌟 Recently starred repositories
           plugin_stars: yes
           plugin_stars_limit: 10 # Limit to 10 entries was 4
