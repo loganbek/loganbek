@@ -1,3 +1,1 @@
-"ignoredfiles" [
-  "github-metrics.svg"
-]
+{ "schedule": "monthly", "ignoredfiles": ["github-metrics.svg"] }
