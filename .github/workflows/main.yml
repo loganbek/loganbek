@@ -50,7 +50,7 @@ jobs:
           plugin_languages_colors: rainbow # TODO customize was github
           plugin_languages_limit: 8
           plugin_languages_threshold: 0%
-          plugin_languages_skipped: ruby
+          plugin_languages_skipped: Ruby
 
           # � Repository contributors
           plugin_contributors: yes
