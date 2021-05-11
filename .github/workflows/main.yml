@@ -45,7 +45,7 @@ jobs:
           plugin_habits_charts: yes # Display charts section
 
           # 🈷️ Most used languages
-          TODO plugin_languages_skipped: my-test-repo
+          # TODO plugin_languages_skipped: my-test-repo
           plugin_languages: yes
           plugin_languages_colors: rainbow # TODO customize was github
           plugin_languages_limit: 8
