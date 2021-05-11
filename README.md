@@ -4,7 +4,7 @@
 
 <!-- ### Hi there 👋 -->
 
-[![Logan's GitHub stats](https://github-readme-stats.vercel.app/api?username=loganbek)](https://github.com/anuraghazra/github-readme-stats)
+[![Logan's GitHub stats](https://github-readme-stats.vercel.app/api?username=loganbek&theme=cobalt&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
 
 ![Metrics](https://github.com/loganbek/loganbek/blob/main/github-metrics.svg)
 
