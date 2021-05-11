@@ -18,7 +18,7 @@ jobs:
           # repo: loganbek # for repo specific metrics
           template: classic
           # 🗃️ Base content
-          base: header, activity, community #, repositories, metadata
+          base: topics, header, activity, achievements, community, music #, repositories, metadata
           # extra_css: # TODO inject css rules
           config_timezone: America/Los_Angeles # supported - https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
           # config_order: base.header, isocalendar, languages, stars # TODO plugin ordering
@@ -30,8 +30,8 @@ jobs:
           # plugin_achievements_ignored: octonaut # Hide octonaut achievement
           plugin_achievements_limit: 5 # Display all unlocked achievement matching threshold and secrets params
           # 🎟️ Follow-up of issues and pull requests
-          plugin_followup: yes
-          plugin_followup_sections: repositories
+          # plugin_followup: yes
+          # plugin_followup_sections: repositoriesn, users
 
           # 🙋 Introduction
           plugin_introduction: yes
@@ -46,11 +46,11 @@ jobs:
 
           # 🈷️ Most used languages
           # TODO plugin_languages_skipped: my-test-repo
-          plugin_languages: yes
-          plugin_languages_colors: rainbow # TODO customize was github
-          plugin_languages_limit: 8
-          plugin_languages_threshold: 0%
-          plugin_languages_skipped: Ruby
+          # plugin_languages: no
+          # plugin_languages_colors: rainbow # TODO customize was github
+          # plugin_languages_limit: 8
+          # plugin_languages_threshold: 0%
+          # plugin_languages_skipped: Ruby
 
           # � Repository contributors
           # plugin_contributors: yes
@@ -74,14 +74,14 @@ jobs:
           plugin_topics: yes
           plugin_topics_sort: stars # Sort by most starred topics
           plugin_topics_mode: mastered # Display icons instead of labels
-          plugin_topics_limit: 50 # Disable limitations
+          plugin_topics_limit: 20 # Disable limitations
 
           # 🌇 GitHub Skyline 3D calendar
-          plugin_skyline: yes
-          plugin_skyline_year: 0 # Set to 0 to display current year
-          plugin_skyline_frames: 60 # Use 60 frames (half-loop)
-          plugin_skyline_quality: 0.5 # Set image quality
-          plugin_skyline_compatibility: yes # Support additional browsers (⚠️ increases file size and reduce optimization)
+          # plugin_skyline: yes
+          # plugin_skyline_year: 0 # Set to 0 to display current year
+          # plugin_skyline_frames: 60 # Use 60 frames (half-loop)
+          # plugin_skyline_quality: 0.5 # Set image quality
+          # plugin_skyline_compatibility: yes # Support additional browsers (⚠️ increases file size and reduce optimization)
 
           # 👨‍💻 Lines of code changed
           plugin_lines: yes
