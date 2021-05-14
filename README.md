@@ -3,6 +3,9 @@
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/loganbek/loganbek)
 [![Metrics](https://github.com/loganbek/loganbek/actions/workflows/main.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/main.yml)
 [![wakatime](https://wakatime.com/badge/github/loganbek/loganbek.svg)](https://wakatime.com/badge/github/loganbek/loganbek)
+
+<figure><embed src="https://wakatime.com/share/@loganbek/9c7e95e6-4f9e-4119-9f89-fedf0c46c2b3.svg"></embed></figure>
+
 <!-- ### Hi there 👋 -->
 
 <!-- Gitpod Documentation Link -->
