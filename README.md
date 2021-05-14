@@ -1,9 +1,13 @@
 # Metrics/Stats
 
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/<your-org>/<your-project>)
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/loganbek/loganbek)
 [![Metrics](https://github.com/loganbek/loganbek/actions/workflows/main.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/main.yml)
 [![wakatime](https://wakatime.com/badge/github/loganbek/loganbek.svg)](https://wakatime.com/badge/github/loganbek/loganbek)
 <!-- ### Hi there 👋 -->
+
+<!-- Gitpod Documentation Link -->
+<!-- [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/loganbek/loganbek) -->
+
 
 <!-- [![Logan's GitHub stats](https://github-readme-stats.vercel.app/api?username=loganbek&theme=cobalt&show_icons=true)](https://github.com/anuraghazra/github-readme-stats) -->
 
