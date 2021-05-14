@@ -1,7 +1,7 @@
 # Github Metrics
 
 [![Metrics](https://github.com/loganbek/loganbek/actions/workflows/main.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/main.yml)
-
+[![wakatime](https://wakatime.com/badge/github/loganbek/loganbek.svg)](https://wakatime.com/badge/github/loganbek/loganbek)
 <!-- ### Hi there 👋 -->
 
 <!-- [![Logan's GitHub stats](https://github-readme-stats.vercel.app/api?username=loganbek&theme=cobalt&show_icons=true)](https://github.com/anuraghazra/github-readme-stats) -->
