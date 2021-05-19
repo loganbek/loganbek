@@ -2,11 +2,12 @@
 
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/loganbek/loganbek)
 [![Metrics](https://github.com/loganbek/loganbek/actions/workflows/main.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/main.yml)
+<!--
 [![wakatime](https://wakatime.com/badge/github/loganbek/loganbek.svg)](https://wakatime.com/badge/github/loganbek/loganbek)
-[<img src="https://api.speedtyper.dev/users/loganbek/badges/averagewpm" alt="SpeedTyper.dev avg wpm" height="25">](https://www.speedtyper.dev/profile/loganbek) 
-[<img src="https://api.speedtyper.dev/users/loganbek/badges/topwpm" alt="SpeedTyper.dev top wpm" height="25">](https://www.speedtyper.dev/profile/loganbek) 
-[<img src="https://api.speedtyper.dev/users/loganbek/badges/gamecount" alt="SpeedTyper.dev games" height="25">](https://www.speedtyper.dev/profile/loganbek)
-
+[<img src="https://api.speedtyper.dev/users/loganbek/badges/averagewpm" alt="SpeedTyper.dev avg wpm" height="20">](https://www.speedtyper.dev/profile/loganbek) 
+[<img src="https://api.speedtyper.dev/users/loganbek/badges/topwpm" alt="SpeedTyper.dev top wpm" height="20">](https://www.speedtyper.dev/profile/loganbek) 
+[<img src="https://api.speedtyper.dev/users/loganbek/badges/gamecount" alt="SpeedTyper.dev games" height="20">](https://www.speedtyper.dev/profile/loganbek)
+-->
 
 <figure><embed src="https://wakatime.com/share/@loganbek/9c7e95e6-4f9e-4119-9f89-fedf0c46c2b3.svg"></embed></figure>
 
