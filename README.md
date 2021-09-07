@@ -9,9 +9,21 @@
 [<img src="https://api.speedtyper.dev/users/loganbek/badges/gamecount" alt="SpeedTyper.dev games" height="20">](https://www.speedtyper.dev/profile/loganbek)
 -->
 
+
+
 <figure><embed src="https://wakatime.com/share/@loganbek/9c7e95e6-4f9e-4119-9f89-fedf0c46c2b3.svg"></embed></figure>
 
 <!-- ### Hi there 👋 -->
+
+<!-- Github - https://github.com/loganbek
+Github Support Community - https://github.community/u/loganbek/summary
+Gitcoin - https://gitcoin.co/loganbek
+LinkedIn - https://linkedin.com/in/loganbek
+Upwork - https://upwork.com/loganbek
+Gmail - loganbek@gmail.com
+Twitter - https://twitter.com/loganbek
+HackerRank - https://www.hackerrank.com/loganbek
+Ethereum - 0x66382ac45B6d8Cb4f47685e28b61FBb5486817Ec - loganbek.eth -->
 
 <!-- Gitpod Documentation Link -->
 <!-- [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/loganbek/loganbek) -->
@@ -27,7 +39,7 @@
 Here are some ideas to get you started:
 
 - 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
+- 🌱 I’m currently learning ... 
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
 - 💬 Ask me about ...
