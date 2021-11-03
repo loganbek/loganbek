@@ -25,7 +25,7 @@ Twitter - https://twitter.com/loganbek
 HackerRank - https://www.hackerrank.com/loganbek
 Ethereum - 0x66382ac45B6d8Cb4f47685e28b61FBb5486817Ec - loganbek.eth 
 Apple Support Communities - https://discussions.apple.com/profile/loganbek
-Figma - htpps://figma.com/@loganbek
+Figma - https://figma.com/@loganbek
 -->
 
 <!-- Gitpod Documentation Link -->
@@ -41,9 +41,10 @@ Figma - htpps://figma.com/@loganbek
 
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ... 
-- 🌱 I’m currently learning ... 
-- 👯 I’m looking to collaborate on ...
+- 🔭 I’m currently working on ... CV Greek Festival, KogeCoin, KogeFarm, Bek Consulting
+- 👷‍♂️ I'm currently working w/ ... TypeScript, React, & WordPress
+- 🌱 I’m currently learning ... vim, Deno, and hotkeys, lots of hotkeys.
+- 👯 I’m looking to collaborate on ... KogeFarm and Bek Consulting
 - 🤔 I’m looking for help with ...
 - 💬 Ask me about ...
 - 📫 How to reach me: ...
