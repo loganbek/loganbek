@@ -51,3 +51,10 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+<foreignObject width="100" height="100">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="loganbek" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/loganbek?trk=profile-badge">Logan Bek</a></div>
+  </div></foreignObject>
+</svg>
+              
