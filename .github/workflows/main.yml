@@ -12,13 +12,15 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
+        
+          # # ====================================================================================
           # 🧱 Core
           token: ${{ secrets.METRICS_TOKEN }} # Your GitHub token
           user: loganbek
           # repo: loganbek # for repo specific metrics
           template: classic
           # 🗃️ Base content
-          base: topics, header, activity, achievements, community, music #, repositories, metadata
+          base: topics, header, activity, achievements, community, music, repositories, repositories_batch, repositories_fork, repositories_affiliations, repositories_skipped, users_ignored,  metadata
           # extra_css: # TODO inject css rules
           config_timezone: America/Los_Angeles # supported - https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
           # config_order: base.header, isocalendar, languages, stars # TODO plugin ordering
@@ -85,6 +87,30 @@ jobs:
 
           # 👨‍💻 Lines of code changed
           plugin_lines: yes
+          plugin_lines_skipped: yes
+          plugin_lines_sections: yes
+          plugin_lines_repositories_limit: yes
+          plugin_lines_history_limit: yes
+          
+          # # ====================================================================================
+          # 📜 Repository licenses
 
+          plugin_licenses: yes
+          # description: Enable licenses plugin
+          # default: <default-value>
+
+          plugin_licenses_setup: yes
+          # description: Setup command
+          # default: <default-value>
+
+          plugin_licenses_ratio: yes
+          # description: Used licenses ratio
+          # default: <default-value>
+
+          plugin_licenses_legal: yes
+          # description: Permissions, limitations and conditions about used licenses
+          # default: <default-value>
+
+          
           # 💭 GitHub Community Support
           plugin_support: yes
