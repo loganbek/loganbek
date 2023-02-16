@@ -16,9 +16,9 @@ jobs:
         
           # # ====================================================================================
           # 🧱 Core
-          token: ${{ secrets.METRICS_TOKEN }} # Your GitHub token
-          user: loganbek
-          # repo: loganbek # for repo specific metrics
+          # token: ${{ secrets.METRICS_TOKEN }} # Your GitHub token
+          user: bek-consulting
+          repo: loganbek # for repo specific metrics
           template: classic
           # 🗃️ Base content
           base: topics, header, activity, achievements, community, music, repositories, repositories_batch, repositories_fork, repositories_affiliations, repositories_skipped, users_ignored,  metadata
