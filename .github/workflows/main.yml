@@ -2,7 +2,9 @@
 name: Metrics
 on:
   # Schedule updates (each hour)
-  schedule: [{ cron: '0 1 * * *' }]
+  # schedule: [{ cron: '0 1 * * *' }]
+  schedule: [{ cron: '0 0 * * 0' }] # run every sunday
+  # schedule: [{ cron: '0 0 * * *'}] # run every day at midnight
   # Lines below let you run workflow manually and on each commit
   workflow_dispatch:
   push: { branches: ['master', 'main'] }
