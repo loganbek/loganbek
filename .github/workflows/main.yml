@@ -2,6 +2,7 @@
 name: Metrics
 on:
   # Schedule updates (each hour)
+  # schedule: [{ cron: '0 1 * * *' }]
   schedule: [{ cron: '0 0 * * 0' }] # run every sunday
   # schedule: [{ cron: '0 0 * * *'}] # run every day at midnight
   # Lines below let you run workflow manually and on each commit
@@ -11,14 +12,15 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: bek-consulting/metrics@HEAD
+      # - uses: lowlighter/metrics@latest
         with:
         
           # # ====================================================================================
           # 🧱 Core
-          token: ${{ secrets.METRICS_TOKEN }} # Your GitHub token
-          user: loganbek
-          # repo: loganbek # for repo specific metrics
+          token: ${{ secrets.METRICS }} # Your GitHub token
+          user: bek-consulting
+          repo: loganbek # for repo specific metrics
           template: classic
           # 🗃️ Base content
           base: topics, header, activity, achievements, community, music, repositories, repositories_batch, repositories_fork, repositories_affiliations, repositories_skipped, users_ignored,  metadata
