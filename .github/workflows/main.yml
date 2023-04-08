@@ -18,7 +18,7 @@ jobs:
         
           # # ====================================================================================
           # 🧱 Core
-          token: ${{ secrets.METRICS }} # Your GitHub token
+          token: ${{ secrets.METRICS_TOKEN }} # Your GitHub token
           user: loganbek
           repo: loganbek # for repo specific metrics
           template: classic
