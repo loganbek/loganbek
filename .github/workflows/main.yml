@@ -19,7 +19,7 @@ jobs:
           # # ====================================================================================
           # 🧱 Core
           token: ${{ secrets.METRICS }} # Your GitHub token
-          user: bek-consulting
+          user: loganbek
           repo: loganbek # for repo specific metrics
           template: classic
           # 🗃️ Base content
@@ -113,7 +113,6 @@ jobs:
           plugin_licenses_legal: yes
           # description: Permissions, limitations and conditions about used licenses
           # default: <default-value>
-
           
           # 💭 GitHub Community Support
           plugin_support: yes
