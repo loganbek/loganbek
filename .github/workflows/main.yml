@@ -18,9 +18,13 @@ jobs:
         
           # # ====================================================================================
           # 🧱 Core
-          token: ${{ secrets.METRICS }} # Your GitHub token
-          user: bek-consulting
-          repo: bek-consulting/loganbek # for repo specific metrics
+
+          # token: ${{ secrets.METRICS }} # Your GitHub token
+          # user: bek-consulting
+          # repo: bek-consulting/loganbek # for repo specific metrics
+          token: ${{ secrets.METRICS_TOKEN }} # Your GitHub token
+          user: loganbek
+          # repo: loganbek # for repo specific metrics
           template: classic
           # 🗃️ Base content
           base: topics, header, activity, achievements, community, music, repositories, repositories_batch, repositories_fork, repositories_affiliations, repositories_skipped, users_ignored,  metadata
@@ -113,7 +117,6 @@ jobs:
           plugin_licenses_legal: yes
           # description: Permissions, limitations and conditions about used licenses
           # default: <default-value>
-
           
           # 💭 GitHub Community Support
           plugin_support: yes
