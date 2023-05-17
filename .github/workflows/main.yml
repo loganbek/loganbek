@@ -12,12 +12,16 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      # - uses: bek-consulting/metrics@HEAD
-      - uses: lowlighter/metrics@latest
+    - uses: bek-consulting/metric@master
+      # - uses: lowlighter/metrics@latest
         with:
         
           # # ====================================================================================
           # 🧱 Core
+
+          # token: ${{ secrets.METRICS }} # Your GitHub token
+          # user: bek-consulting
+          # repo: bek-consulting/loganbek # for repo specific metrics
           token: ${{ secrets.METRICS_TOKEN }} # Your GitHub token
           user: loganbek
           # repo: loganbek # for repo specific metrics
