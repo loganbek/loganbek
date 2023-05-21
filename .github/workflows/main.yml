@@ -12,10 +12,10 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-    - uses: bek-consulting/metric@master
+    - uses: bek-consulting/metrics@master
       # - uses: lowlighter/metrics@latest
       with:
-        
+          
           # # ====================================================================================
           # 🧱 Core
 
