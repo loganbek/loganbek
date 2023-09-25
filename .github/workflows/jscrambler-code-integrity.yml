@@ -36,7 +36,7 @@ jobs:
       - name: Jscrambler Code Integrity
         id: jscrambler
         # the complete list of inputs can be found here: https://github.com/marketplace/actions/jscrambler#inputs
-        uses: jscrambler/code-integrity-actions/protect@9abafe479bb1e2cb2f7aa4fae8134f02a43f0704
+        uses: jscrambler/code-integrity-actions/protect@a02f5bc5fe15afa1e4d1bc719f0330d951c26db9
         with:
           application-id: ${{ secrets.JSCRAMBLER_APPLICATION_ID }}  # This value should be created within your Jscrambler account
           secret-key: ${{ secrets.JSCRAMBLER_SECRET_KEY }}          # This value can be found in your Jscrambler account
