@@ -282,22 +282,22 @@
                             <div class="track">
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOcOnfpfwAGfgLYttYINwAAAABJRU5ErkJggg==" width="32" height="32" alt="" />
                                 <div class="infos">
-                                    <div class="name">Don't Stop</div>
-                                    <div class="artist">i_o, Raito</div>
+                                    <div class="name">Passivex</div>
+                                    <div class="artist">i_o</div>
                                 </div>
                             </div>
                             <div class="track">
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOcOnfpfwAGfgLYttYINwAAAABJRU5ErkJggg==" width="32" height="32" alt="" />
                                 <div class="infos">
-                                    <div class="name">Let Me Go</div>
-                                    <div class="artist">i_o, Tommy Trash, Daisy Guttridge</div>
+                                    <div class="name">Body Rock</div>
+                                    <div class="artist">i_o</div>
                                 </div>
                             </div>
                             <div class="track">
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOcOnfpfwAGfgLYttYINwAAAABJRU5ErkJggg==" width="32" height="32" alt="" />
                                 <div class="infos">
-                                    <div class="name">Violence - Original Mix</div>
-                                    <div class="artist">Grimes, i_o</div>
+                                    <div class="name">Violence - REZZ Remix</div>
+                                    <div class="artist">Grimes, i_o, Rezz</div>
                                 </div>
                             </div>
                         </div>
@@ -342,7 +342,7 @@
             </section>
             <footer>
                 <span>These metrics do not include all private contributions</span>
-                <span>Last updated 11 Jan 2025, 17:04:19 (timezone America/Los_Angeles) with lowlighter/metrics@3.34.0-beta</span>
+                <span>Last updated 18 Jan 2025, 17:01:14 (timezone America/Los_Angeles) with lowlighter/metrics@3.34.0-beta</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
