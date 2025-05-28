@@ -1,0 +1,97 @@
+# Model Context Protocol (MCP) Configuration
+# This file configures MCP servers for enhanced Copilot functionality
+
+# GitHub-specific MCP server for repository insights
+github:
+  server: "github-mcp-server"
+  description: "Provides GitHub repository context and insights"
+  capabilities:
+    - "repository-analysis"
+    - "workflow-insights" 
+    - "issue-tracking"
+    - "metrics-analysis"
+  
+  # Configuration for this repository
+  config:
+    repository: "loganbek/loganbek"
+    focus_areas:
+      - "profile-maintenance"
+      - "metrics-generation"
+      - "documentation-updates"
+      - "workflow-optimization"
+
+# Documentation MCP server for Vim/Markdown content
+documentation:
+  server: "docs-mcp-server"
+  description: "Assists with documentation formatting and maintenance"
+  capabilities:
+    - "markdown-formatting"
+    - "vim-help-syntax"
+    - "link-validation"
+    - "content-suggestions"
+  
+  config:
+    file_types:
+      - "*.md"
+      - "*.txt"
+      - "*.yml"
+    
+    style_guides:
+      - "github-markdown"
+      - "vim-help-format"
+
+# Workflow MCP server for GitHub Actions
+workflows:
+  server: "actions-mcp-server" 
+  description: "Provides GitHub Actions workflow assistance"
+  capabilities:
+    - "workflow-validation"
+    - "action-recommendations"
+    - "security-best-practices"
+    - "performance-optimization"
+  
+  config:
+    workflow_paths:
+      - ".github/workflows/"
+    
+    focus_areas:
+      - "metrics-generation"
+      - "security-scanning"
+      - "dependency-updates"
+
+# Security MCP server for security best practices
+security:
+  server: "security-mcp-server"
+  description: "Provides security guidance and recommendations"
+  capabilities:
+    - "dependency-scanning"
+    - "secret-detection"
+    - "security-policy-guidance"
+    - "vulnerability-assessment"
+  
+  config:
+    scan_paths:
+      - ".github/"
+      - "*.yml"
+      - "*.md"
+    
+    policies:
+      - "SECURITY.md"
+      - "CODE_OF_CONDUCT.md"
+
+# General settings
+settings:
+  # Enable all configured MCP servers
+  enabled_servers:
+    - "github"
+    - "documentation" 
+    - "workflows"
+    - "security"
+  
+  # Context sharing between servers
+  shared_context: true
+  
+  # Cache settings for performance
+  cache:
+    enabled: true
+    ttl: 3600 # 1 hour

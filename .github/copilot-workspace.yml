@@ -1,0 +1,55 @@
+# GitHub Copilot Workspace Configuration
+
+# Development environment setup for the loganbek/loganbek repository
+name: "Logan Bek Profile Repository"
+
+# Repository context
+description: "Personal GitHub profile repository with metrics, documentation, and community standards"
+
+# Primary languages and frameworks used in this repository
+languages:
+  - markdown
+  - yaml
+  - html
+  - vim
+  - javascript
+
+# Key directories and their purposes
+structure:
+  ".github/": "GitHub-specific configuration files and workflows"
+  "admin/": "Content management system files (Netlify CMS)"
+  "hired_profile/": "Professional profile information"
+  "README.md": "Main profile README displayed on GitHub profile"
+  "vim-ref.txt": "Vim editor reference documentation"
+  "github-metrics.svg": "Generated GitHub metrics visualization"
+
+# Development tools and environment
+tools:
+  - name: "GitHub Actions"
+    purpose: "CI/CD workflows for metrics generation and security scanning"
+  - name: "Netlify CMS"
+    purpose: "Content management for profile updates"
+  - name: "Gitpod"
+    purpose: "Cloud development environment"
+
+# File types and their typical use cases
+file_patterns:
+  "*.md": "Markdown documentation and profile content"
+  "*.yml": "GitHub Actions workflows and configuration files"
+  "*.html": "Web content and admin interfaces"
+  "*.txt": "Plain text documentation (especially Vim help files)"
+
+# Common tasks in this repository
+common_tasks:
+  - "Update profile README with new information"
+  - "Maintain GitHub Actions workflows"
+  - "Update security and community documentation"
+  - "Manage Vim documentation and references"
+  - "Configure GitHub repository settings"
+
+# Repository-specific conventions
+conventions:
+  commit_style: "Conventional commits with clear, descriptive messages"
+  branch_naming: "Use descriptive names like 'feature/update-readme' or 'fix/workflow-issue'"
+  documentation: "Keep documentation up-to-date and accessible"
+  security: "Follow GitHub security best practices"
