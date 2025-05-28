@@ -1,0 +1,28 @@
+---
+version: 1
+config:
+  # General settings
+  base: main
+  # Files to exclude from review
+  exclude:
+    - "**/*.svg"
+    - "**/*.png"
+    - "**/*.jpg"
+    - "**/*.jpeg"
+    - "**/*.gif"
+    - "**/*.ico"
+    - "**/*.lock"
+    - "**/*.min.js"
+    - "**/*.min.css"
+  # Review settings
+  reviews:
+    request_changes_threshold: moderate
+    strictness: medium
+    auto_review:
+      enabled: true
+      drafts: false
+      base_branches:
+        - main
+  # PR settings
+  silent_comments: false
+  publish_status: true
