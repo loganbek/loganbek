@@ -1,0 +1,58 @@
+# Copilot Chat Configuration
+
+# This file configures GitHub Copilot Chat behavior for this repository
+
+# Chat context preferences
+context:
+  # Include these files when providing context about the repository
+  important_files:
+    - "README.md"
+    - ".github/copilot-instructions.md"
+    - ".github/workflows/*.yml"
+    - "SECURITY.md"
+    - "CODE_OF_CONDUCT.md"
+  
+  # Ignore these patterns when providing context (to reduce noise)
+  ignore_patterns:
+    - "*.svg"
+    - "*.png" 
+    - "*.jpg"
+    - ".git/*"
+    - "node_modules/*"
+
+# Repository-specific knowledge
+knowledge:
+  repository_type: "profile"
+  primary_purpose: "GitHub profile presentation and documentation"
+  maintainer: "Logan Bek (@loganbek)"
+  
+  # Key technologies used
+  technologies:
+    - "GitHub Actions"
+    - "Markdown"
+    - "YAML"
+    - "Vim/Neovim"
+    - "Netlify CMS"
+    - "Gitpod"
+
+  # Common maintenance tasks
+  maintenance:
+    - "Update GitHub metrics via automated workflows"
+    - "Maintain Vim documentation accuracy"
+    - "Keep security policies current"
+    - "Update profile information and links"
+
+# Chat assistance preferences
+assistance_style:
+  - "Provide clear, actionable suggestions"
+  - "Include relevant examples when possible"
+  - "Consider GitHub best practices"
+  - "Respect existing file formats and conventions"
+  - "Suggest minimal, focused changes"
+
+# Special considerations
+considerations:
+  - "This is a public profile repository - maintain professional appearance"
+  - "Preserve existing badges and metrics functionality"
+  - "Vim documentation should maintain help file format standards"
+  - "GitHub Actions should be secure and efficient"
