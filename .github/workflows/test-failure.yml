@@ -17,14 +17,14 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Intentional failure for testing
-        if: ${{ inputs.should_fail }}
+        if: ${{ github.event.inputs.should_fail }}
         run: |
           echo "This workflow is designed to fail for testing purposes"
           echo "Testing auto-issue creation on workflow failure"
           exit 1
           
       - name: Success path
-        if: ${{ !inputs.should_fail }}
+        if: ${{ !github.event.inputs.should_fail }}
         run: |
           echo "This workflow completed successfully"
           echo "No issue should be created"
