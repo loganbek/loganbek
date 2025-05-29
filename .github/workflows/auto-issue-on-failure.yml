@@ -1,0 +1,130 @@
+name: Auto-create Issue on Workflow Failure
+
+on:
+  workflow_run:
+    workflows: ["Metrics", "CodeQL", "Deploy Jekyll with GitHub Pages dependencies preinstalled", "Test Workflow Failure"]
+    types:
+      - completed
+
+jobs:
+  create-issue-on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    permissions:
+      issues: write
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create issue on workflow failure
+        uses: actions/github-script@v7
+        env:
+          WORKFLOW_NAME: ${{ github.event.workflow_run.name }}
+          WORKFLOW_URL: ${{ github.event.workflow_run.html_url }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+          RUN_ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
+          RUN_STARTED: ${{ github.event.workflow_run.run_started_at }}
+          RUN_UPDATED: ${{ github.event.workflow_run.updated_at }}
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            try {
+              const workflowName = process.env.WORKFLOW_NAME;
+              const workflowUrl = process.env.WORKFLOW_URL;
+              const runId = process.env.RUN_ID;
+              const headSha = process.env.HEAD_SHA;
+              const headBranch = process.env.HEAD_BRANCH;
+              const runAttempt = process.env.RUN_ATTEMPT;
+              const runStarted = process.env.RUN_STARTED;
+              const runUpdated = process.env.RUN_UPDATED;
+              
+              console.log(`Processing workflow failure: ${workflowName} (Run ID: ${runId})`);
+              
+              // Check if an issue already exists for this workflow failure
+              const existingIssues = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                labels: 'automated-issue,workflow-failure',
+                per_page: 100
+              });
+              
+              const issueTitle = `🚨 Workflow Failure: ${workflowName}`;
+              const duplicateIssue = existingIssues.data.find(issue => 
+                issue.title === issueTitle && 
+                issue.body.includes(runId)
+              );
+              
+              if (duplicateIssue) {
+                console.log(`Issue already exists for this workflow failure: #${duplicateIssue.number}`);
+                return;
+              }
+              
+              // Get additional details about the workflow run
+              let jobDetails = '';
+              try {
+                const jobs = await github.rest.actions.listJobsForWorkflowRun({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  run_id: runId
+                });
+                
+                const failedJobs = jobs.data.jobs.filter(job => job.conclusion === 'failure');
+                if (failedJobs.length > 0) {
+                  jobDetails = '\n## Failed Jobs\n\n' + 
+                    failedJobs.map(job => `- **${job.name}**: [View logs](${job.html_url})`).join('\n');
+                }
+              } catch (jobError) {
+                console.log('Could not fetch job details:', jobError.message);
+              }
+              
+              // Create the issue body with diagnostic information
+              const issueBody = `## Workflow Failure Details
+              
+**Workflow:** ${workflowName}  
+**Run ID:** ${runId}  
+**Branch:** ${headBranch}  
+**Commit:** ${headSha}  
+**Attempt:** ${runAttempt}  
+**Started:** ${runStarted}  
+**Updated:** ${runUpdated}  
+**Workflow URL:** ${workflowUrl}${jobDetails}
+
+## Description
+              
+The GitHub Actions workflow "${workflowName}" has failed. This issue was automatically created to track the failure and facilitate debugging.
+
+## Next Steps
+
+- [ ] Review the workflow logs for error details
+- [ ] Identify the root cause of the failure
+- [ ] Apply necessary fixes
+- [ ] Re-run the workflow to verify the fix
+- [ ] Close this issue once resolved
+
+## Diagnostic Information
+
+Please check the [workflow run logs](${workflowUrl}) for detailed error information.
+
+---
+*This issue was automatically created by the auto-issue-on-failure workflow.*`;
+
+              // Create the issue
+              const issue = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: issueTitle,
+                body: issueBody,
+                labels: ['automated-issue', 'workflow-failure', 'bug'],
+                assignees: ['copilot']
+              });
+              
+              console.log(`Created issue #${issue.data.number} for workflow failure`);
+              
+            } catch (error) {
+              console.error('Error creating issue for workflow failure:', error);
+              throw error;
+            }
