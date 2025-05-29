@@ -1,0 +1,30 @@
+name: Test Workflow Failure
+
+on:
+  workflow_dispatch:
+    inputs:
+      should_fail:
+        description: 'Should this workflow fail?'
+        required: false
+        default: 'true'
+        type: boolean
+
+jobs:
+  test-failure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Intentional failure for testing
+        if: ${{ inputs.should_fail }}
+        run: |
+          echo "This workflow is designed to fail for testing purposes"
+          echo "Testing auto-issue creation on workflow failure"
+          exit 1
+          
+      - name: Success path
+        if: ${{ !inputs.should_fail }}
+        run: |
+          echo "This workflow completed successfully"
+          echo "No issue should be created"
