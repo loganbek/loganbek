@@ -1,3 +1,17 @@
+# Update Recent Repositories
+#
+# This workflow automatically updates the "Recent Repositories" section in README.md
+# with the most recently updated repositories from the user's GitHub account.
+#
+# Features:
+# - Fetches up to 8 recently updated repositories
+# - Filters out archived repositories and those older than 6 months
+# - Includes recently active forks (updated within 30 days)
+# - Adds 🔒 emoji for private repositories
+# - Adds 🍴 emoji for forked repositories
+# - Proper description truncation and formatting
+# - Inserts section before existing metrics/stats content
+
 name: Update Recent Repositories
 on:
   # Run when the main workflow runs to keep it in sync
@@ -24,11 +38,18 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
 
       - name: Fetch recent repositories
         id: recent-repos
