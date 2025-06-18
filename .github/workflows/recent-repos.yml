@@ -18,6 +18,9 @@ on:
 jobs:
   update-recent-repos:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required to push changes to README.md
+      actions: read    # Required to read workflow information
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -138,15 +141,17 @@ jobs:
           with open('recent_repos.md', 'r') as f:
               recent_repos = f.read().strip()
           
-          # Pattern to match existing recent repositories section
-          pattern = r'## 📚 Recent Repositories.*?(?=\n## |\n<|\nfigure|\Z)'
+          print('Updating README.md with recent repositories section...')
+          
+          # Pattern to match existing recent repositories section (more flexible)
+          pattern = r'## 📚 Recent Repositories.*?(?=\n## |\n<figure|\n<svg|\n!\[|\Z)'
           
           if re.search(pattern, content, re.DOTALL):
-              # Replace existing section
+              print('Found existing Recent Repositories section - replacing')
               content = re.sub(pattern, recent_repos, content, flags=re.DOTALL)
           else:
-              # Add new section before the metrics/embedded content
-              # Look for wakatime figure or metrics image
+              print('No existing Recent Repositories section found - adding new section')
+              # Add new section before the wakatime figure or other content
               insert_patterns = [
                   r'(<figure><embed src=\"https://wakatime\.com)',
                   r'(!\[Metrics\])',
@@ -155,21 +160,22 @@ jobs:
               ]
               
               inserted = False
-              for pattern in insert_patterns:
-                  if re.search(pattern, content):
-                      content = re.sub(pattern, f'{recent_repos}\n\n\\1', content, 1)
+              for pattern_test in insert_patterns:
+                  if re.search(pattern_test, content):
+                      print(f'Inserting before: {pattern_test}')
+                      content = re.sub(pattern_test, f'{recent_repos}\n\n\\1', content, 1)
                       inserted = True
                       break
               
               if not inserted:
-                  # Fallback: add at the end before any comments
+                  print('No suitable insertion point found - adding at end')
                   content = content.rstrip() + '\n\n' + recent_repos + '\n'
           
           # Write updated README
           with open('README.md', 'w') as f:
               f.write(content)
           
-          print('README updated successfully')
+          print('README.md updated successfully')
           "
 
       - name: Commit changes
