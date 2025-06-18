@@ -5,11 +5,15 @@ on:
     workflows: ["Metrics"]
     types:
       - completed
-  # Also allow manual triggering
+  # Also allow manual triggering for testing
   workflow_dispatch:
   # Run on schedule to check for new commits in repos
   schedule:
     - cron: '0 2 * * *' # Run daily at 2 AM
+  # Also run when the workflow file itself is updated
+  push:
+    paths:
+      - '.github/workflows/recent-repos.yml'
 
 jobs:
   update-recent-repos:
@@ -29,48 +33,93 @@ jobs:
           python3 -c "
           import json
           import requests
-          from datetime import datetime
+          from datetime import datetime, timezone, timedelta
           import os
           import sys
           
           try:
               # Get recent repositories sorted by last updated
-              headers = {'Authorization': f'token {os.environ[\"GITHUB_TOKEN\"]}'}
-              response = requests.get('https://api.github.com/user/repos?sort=updated&per_page=8&affiliation=owner', headers=headers)
+              headers = {
+                  'Authorization': f'token {os.environ[\"GITHUB_TOKEN\"]}',
+                  'Accept': 'application/vnd.github.v3+json'
+              }
+              response = requests.get('https://api.github.com/user/repos?sort=updated&per_page=20&affiliation=owner', headers=headers)
               response.raise_for_status()
               repos = response.json()
+              
+              # Filter repos - only include those updated in last 6 months and exclude archived
+              cutoff_date = datetime.now(timezone.utc) - timedelta(days=180)
+              filtered_repos = []
+              
+              for repo in repos:
+                  updated_at = datetime.fromisoformat(repo['updated_at'].replace('Z', '+00:00'))
+                  
+                  # Skip archived repositories and very old ones
+                  if repo.get('archived', False) or updated_at < cutoff_date:
+                      continue
+                      
+                  # Skip repositories that are just forks (unless they have recent activity)
+                  if repo.get('fork', False):
+                      # Only include forks if they have been updated recently (within 30 days)
+                      recent_cutoff = datetime.now(timezone.utc) - timedelta(days=30)
+                      if updated_at < recent_cutoff:
+                          continue
+                  
+                  filtered_repos.append(repo)
+                  if len(filtered_repos) >= 8:
+                      break
               
               # Generate markdown for recent repositories section
               with open('recent_repos.md', 'w') as f:
                   f.write('## 📚 Recent Repositories\n\n')
                   
-                  for repo in repos:
-                      name = repo['name']
-                      private = repo['private']
-                      updated_at = datetime.fromisoformat(repo['updated_at'].replace('Z', '+00:00'))
-                      html_url = repo['html_url']
-                      description = repo.get('description', '') or 'No description'
-                      
-                      # Format the date
-                      formatted_date = updated_at.strftime('%b %d, %Y')
-                      
-                      # Add lock icon for private repos
-                      if private:
-                          privacy_icon = '🔒 '
-                      else:
-                          privacy_icon = ''
-                      
-                      # Truncate description if too long
-                      if len(description) > 60:
-                          description = description[:60] + '...'
-                      
-                      f.write(f'- {privacy_icon}**[{name}]({html_url})** - {description} *(Updated: {formatted_date})*\n')
+                  if not filtered_repos:
+                      f.write('*No recently active repositories found.*\n')
+                  else:
+                      for repo in filtered_repos:
+                          name = repo['name']
+                          private = repo['private']
+                          updated_at = datetime.fromisoformat(repo['updated_at'].replace('Z', '+00:00'))
+                          html_url = repo['html_url']
+                          description = repo.get('description', '') or ''
+                          
+                          # Format the date
+                          formatted_date = updated_at.strftime('%b %d, %Y')
+                          
+                          # Add appropriate icons
+                          if private:
+                              privacy_icon = '🔒 '
+                          else:
+                              privacy_icon = ''
+                          
+                          # Add fork indicator if applicable
+                          if repo.get('fork', False):
+                              fork_icon = '🍴 '
+                          else:
+                              fork_icon = ''
+                          
+                          # Use a default description if none provided
+                          if not description:
+                              description = 'No description provided'
+                          
+                          # Truncate description if too long
+                          if len(description) > 80:
+                              description = description[:80] + '...'
+                          
+                          f.write(f'- {privacy_icon}{fork_icon}**[{name}]({html_url})** - {description} *(Updated: {formatted_date})*\n')
               
               with open('recent_repos.md', 'r') as f:
-                  print(f.read())
-                  
+                  content = f.read()
+                  print(content)
+                  if not filtered_repos:
+                      print('No repositories to display')
+                      
           except Exception as e:
               print(f'Error fetching repositories: {e}')
+              # Create a fallback section
+              with open('recent_repos.md', 'w') as f:
+                  f.write('## 📚 Recent Repositories\n\n')
+                  f.write('*Unable to fetch recent repositories at this time.*\n')
               sys.exit(1)
           "
         env:
