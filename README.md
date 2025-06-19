@@ -1,28 +1,6 @@
 # Metrics/Stats
 
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/loganbek/loganbek)
-[## 📚 Recent Repositories
-
-- **[loganbek](https://github.com/loganbek/loganbek)** - Software Engineer | Implementation Consultant | Technical Writer *(Updated: Jun 19, 2025)*
-- 🔒 **[smc_framework](https://github.com/loganbek/smc_framework)** - No description provided *(Updated: Jun 18, 2025)*
-- **[sentinel-purge](https://github.com/loganbek/sentinel-purge)** - No description provided *(Updated: Jun 18, 2025)*
-- 🍴 **[awesome-markdown-editors](https://github.com/loganbek/awesome-markdown-editors)** - A collection of awesome markdown editors & (pre)viewers for Linux, Apple OS X, M... *(Updated: Jun 18, 2025)*
-- 🔒 **[notes](https://github.com/loganbek/notes)** - No description provided *(Updated: Jun 18, 2025)*
-- 🔒 **[autopwn](https://github.com/loganbek/autopwn)** - No description provided *(Updated: Jun 18, 2025)*
-- 🍴 **[developer-starter](https://github.com/loganbek/developer-starter)** - Developer starter template for Finsweet projects. *(Updated: Jun 18, 2025)*
-- 🍴 **[dotfiles](https://github.com/loganbek/dotfiles)** - :wrench: .files, including ~/.macos — sensible hacker defaults for macOS *(Updated: Jun 17, 2025)*
-
-(https://github.com/loganbek/loganbek/actions/workflows/main.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/main.yml)
-[![CodeQL](https://github.com/loganbek/loganbek/actions/workflows/codeql.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/codeql.yml)
-[![Update Recent Repositories](https://github.com/loganbek/loganbek/actions/workflows/recent-repos.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/recent-repos.yml)
-<!--
-[![wakatime](https://wakatime.com/badge/github/loganbek/loganbek.svg)](https://wakatime.com/badge/github/loganbek/loganbek)
-[<img src="https://api.speedtyper.dev/users/loganbek/badges/averagewpm" alt="SpeedTyper.dev avg wpm" height="20">](https://www.speedtyper.dev/profile/loganbek) 
-[<img src="https://api.speedtyper.dev/users/loganbek/badges/topwpm" alt="SpeedTyper.dev top wpm" height="20">](https://www.speedtyper.dev/profile/loganbek) 
-[<img src="https://api.speedtyper.dev/users/loganbek/badges/gamecount" alt="SpeedTyper.dev games" height="20">](https://www.speedtyper.dev/profile/loganbek)
--->
-
-
 
 ## 📚 Recent Repositories
 
@@ -35,7 +13,17 @@
 - 🍴 **[developer-starter](https://github.com/loganbek/developer-starter)** - Developer starter template for Finsweet projects. *(Updated: Jun 18, 2025)*
 - 🍴 **[dotfiles](https://github.com/loganbek/dotfiles)** - :wrench: .files, including ~/.macos — sensible hacker defaults for macOS *(Updated: Jun 17, 2025)*
 
-/share/@loganbek/9c7e95e6-4f9e-4119-9f89-fedf0c46c2b3.svg"></embed></figure>
+[![GitHub Actions](https://github.com/loganbek/loganbek/actions/workflows/main.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/main.yml)
+[![CodeQL](https://github.com/loganbek/loganbek/actions/workflows/codeql.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/codeql.yml)
+[![Update Recent Repositories](https://github.com/loganbek/loganbek/actions/workflows/recent-repos.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/recent-repos.yml)
+<!--
+[![wakatime](https://wakatime.com/badge/github/loganbek/loganbek.svg)](https://wakatime.com/badge/github/loganbek/loganbek)
+[<img src="https://api.speedtyper.dev/users/loganbek/badges/averagewpm" alt="SpeedTyper.dev avg wpm" height="20">](https://www.speedtyper.dev/profile/loganbek) 
+[<img src="https://api.speedtyper.dev/users/loganbek/badges/topwpm" alt="SpeedTyper.dev top wpm" height="20">](https://www.speedtyper.dev/profile/loganbek) 
+[<img src="https://api.speedtyper.dev/users/loganbek/badges/gamecount" alt="SpeedTyper.dev games" height="20">](https://www.speedtyper.dev/profile/loganbek)
+-->
+
+![GitHub Metrics](https://github.com/loganbek/loganbek/blob/main/github-metrics.svg)
 
 <!-- ### Hi there 👋 -->
 
@@ -55,52 +43,20 @@ Figma - https://figma.com/@loganbek
 <!-- Gitpod Documentation Link -->
 <!-- [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/loganbek/loganbek) -->
 
-
 <!-- [![Logan's GitHub stats](https://github-readme-stats.vercel.app/api?username=loganbek&theme=cobalt&show_icons=true)](https://github.com/anuraghazra/github-readme-stats) -->
-
-## 📚 Recent Repositories
-
-- **[loganbek](https://github.com/loganbek/loganbek)** - Software Engineer | Implementation Consultant | Technical Writer *(Updated: Jun 19, 2025)*
-- 🔒 **[smc_framework](https://github.com/loganbek/smc_framework)** - No description provided *(Updated: Jun 18, 2025)*
-- **[sentinel-purge](https://github.com/loganbek/sentinel-purge)** - No description provided *(Updated: Jun 18, 2025)*
-- 🍴 **[awesome-markdown-editors](https://github.com/loganbek/awesome-markdown-editors)** - A collection of awesome markdown editors & (pre)viewers for Linux, Apple OS X, M... *(Updated: Jun 18, 2025)*
-- 🔒 **[notes](https://github.com/loganbek/notes)** - No description provided *(Updated: Jun 18, 2025)*
-- 🔒 **[autopwn](https://github.com/loganbek/autopwn)** - No description provided *(Updated: Jun 18, 2025)*
-- 🍴 **[developer-starter](https://github.com/loganbek/developer-starter)** - Developer starter template for Finsweet projects. *(Updated: Jun 18, 2025)*
-- 🍴 **[dotfiles](https://github.com/loganbek/dotfiles)** - :wrench: .files, including ~/.macos — sensible hacker defaults for macOS *(Updated: Jun 17, 2025)*
-
-(https://github.com/loganbek/loganbek/blob/main/github-metrics.svg)
 
 <!--
 **loganbek/loganbek** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ... CV Greek Festival, KogeCoin, KogeFarm, Bek Consulting
+- 🔭 I'm currently working on ... CV Greek Festival, KogeCoin, KogeFarm, Bek Consulting
 - 👷‍♂️ I'm currently working w/ ... TypeScript, React, & WordPress
-- 🌱 I’m currently learning ... vim, Deno, and hotkeys, lots of hotkeys.
-- 👯 I’m looking to collaborate on ... KogeFarm and Bek Consulting
-- 🤔 I’m looking for help with ...
+- 🌱 I'm currently learning ... vim, Deno, and hotkeys, lots of hotkeys.
+- 👯 I'm looking to collaborate on ... KogeFarm and Bek Consulting
+- 🤔 I'm looking for help with ...
 - 💬 Ask me about ...
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-## 📚 Recent Repositories
-
-- 🔒 **[smc_framework](https://github.com/loganbek/smc_framework)** - A fully automated, cross-platform microtask completion system that concurrently ... *(Updated: Jun 19, 2025)*
-- **[loganbek](https://github.com/loganbek/loganbek)** - Software Engineer | Implementation Consultant | Technical Writer *(Updated: Jun 19, 2025)*
-- **[sentinel-purge](https://github.com/loganbek/sentinel-purge)** - No description provided *(Updated: Jun 18, 2025)*
-- 🍴 **[awesome-markdown-editors](https://github.com/loganbek/awesome-markdown-editors)** - A collection of awesome markdown editors & (pre)viewers for Linux, Apple OS X, M... *(Updated: Jun 18, 2025)*
-- 🔒 **[notes](https://github.com/loganbek/notes)** - No description provided *(Updated: Jun 18, 2025)*
-- 🔒 **[autopwn](https://github.com/loganbek/autopwn)** - No description provided *(Updated: Jun 18, 2025)*
-- 🍴 **[developer-starter](https://github.com/loganbek/developer-starter)** - Developer starter template for Finsweet projects. *(Updated: Jun 18, 2025)*
-- 🍴 **[dotfiles](https://github.com/loganbek/dotfiles)** - :wrench: .files, including ~/.macos — sensible hacker defaults for macOS *(Updated: Jun 17, 2025)*
-
- width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-<foreignObject width="100" height="100">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="loganbek" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/loganbek?trk=profile-badge">Logan Bek</a></div>
-  </div></foreignObject>
-</svg>
-              
