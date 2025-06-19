@@ -26,17 +26,18 @@ jobs:
           # repo: loganbek # for repo specific metrics
           template: classic
           # 🗃️ Base content
-          base: topics, header, activity, achievements, community, music, repositories, repositories_batch, repositories_fork, repositories_affiliations, repositories_skipped, users_ignored,  metadata
+          base: topics, header, activity, community, music, repositories, repositories_batch, repositories_fork, repositories_affiliations, repositories_skipped, users_ignored,  metadata
           # extra_css: # TODO inject css rules
           config_timezone: America/Los_Angeles # supported - https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
           # config_order: base.header, isocalendar, languages, stars # TODO plugin ordering
           config_twemoji: yes
           # 🏆 Achievements
-          plugin_achievements: yes
-          plugin_achievements_threshold: C # Display achievements with rank B or higher
-          plugin_achievements_secrets: yes # Display unlocked secrets achievements
+          # Disabled due to deprecated Projects (classic) API causing GraphQL errors
+          # plugin_achievements: yes
+          # plugin_achievements_threshold: C # Display achievements with rank B or higher
+          # plugin_achievements_secrets: yes # Display unlocked secrets achievements
           # plugin_achievements_ignored: octonaut # Hide octonaut achievement
-          plugin_achievements_limit: 5 # Display all unlocked achievement matching threshold and secrets params
+          # plugin_achievements_limit: 5 # Display all unlocked achievement matching threshold and secrets params
           # 🎟️ Follow-up of issues and pull requests
           # plugin_followup: yes
           # plugin_followup_sections: repositoriesn, users
@@ -99,23 +100,12 @@ jobs:
           plugin_lines_history_limit: yes
           
           # # ====================================================================================
-          # 📜 Repository licenses
+          # 📜 Repository licenses - Disabled (not supported for user context)
 
-          plugin_licenses: yes
-          # description: Enable licenses plugin
-          # default: <default-value>
-
-          plugin_licenses_setup: yes
-          # description: Setup command
-          # default: <default-value>
-
-          plugin_licenses_ratio: yes
-          # description: Used licenses ratio
-          # default: <default-value>
-
-          plugin_licenses_legal: yes
-          # description: Permissions, limitations and conditions about used licenses
-          # default: <default-value>
+          # plugin_licenses: yes
+          # plugin_licenses_setup: yes
+          # plugin_licenses_ratio: yes
+          # plugin_licenses_legal: yes
           
-          # 💭 GitHub Community Support
-          plugin_support: yes
+          # 💭 GitHub Community Support - Disabled (account doesn't exist on github.community)
+          # plugin_support: yes
