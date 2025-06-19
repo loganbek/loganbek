@@ -3,6 +3,7 @@
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/loganbek/loganbek)
 [![Metrics](https://github.com/loganbek/loganbek/actions/workflows/main.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/main.yml)
 [![CodeQL](https://github.com/loganbek/loganbek/actions/workflows/codeql.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/codeql.yml)
+[![Update Recent Repositories](https://github.com/loganbek/loganbek/actions/workflows/recent-repos.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/recent-repos.yml)
 <!--
 [![wakatime](https://wakatime.com/badge/github/loganbek/loganbek.svg)](https://wakatime.com/badge/github/loganbek/loganbek)
 [<img src="https://api.speedtyper.dev/users/loganbek/badges/averagewpm" alt="SpeedTyper.dev avg wpm" height="20">](https://www.speedtyper.dev/profile/loganbek) 
