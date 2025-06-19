@@ -1,0 +1,233 @@
+# Update Recent Repositories
+#
+# This workflow automatically updates the "Recent Repositories" section in README.md
+# with the most recently updated repositories from the user's GitHub account.
+#
+# Features:
+# - Fetches up to 8 recently updated repositories using GitHub CLI (firewall-friendly)
+# - Filters out archived repositories and those not updated in 6 months
+# - Includes recently active forks (updated within 30 days)
+# - Adds 🔒 emoji for private repositories
+# - Adds 🍴 emoji for forked repositories
+# - Proper description truncation and formatting
+# - Inserts section before existing metrics/stats content
+#
+# Technical Notes:
+# - Uses GitHub CLI (gh api) instead of direct HTTP requests to avoid firewall issues
+# - Requires GH_TOKEN environment variable for authentication
+
+name: Update Recent Repositories
+on:
+  # Run when the main workflow runs to keep it in sync
+  workflow_run:
+    workflows: ["Metrics"]
+    types:
+      - completed
+  # Also allow manual triggering for testing
+  workflow_dispatch:
+  # Run on schedule to check for new commits in repos
+  schedule:
+    - cron: '0 2 * * *' # Run daily at 2 AM
+  # Also run when the workflow file itself is updated
+  push:
+    paths:
+      - '.github/workflows/recent-repos.yml'
+
+jobs:
+  update-recent-repos:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required to push changes to README.md
+      actions: read    # Required to read workflow information
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Fetch recent repositories
+        id: recent-repos
+        run: |
+          python3 -c "
+          import json
+          import subprocess
+          from datetime import datetime, timezone, timedelta
+          import sys
+          
+          try:
+              # Use GitHub CLI to get recent repositories - this works within firewall constraints
+              result = subprocess.run(['gh', 'api', 'user/repos', '--paginate', '-F', 'sort=updated', '-F', 'per_page=20', '-F', 'affiliation=owner'], 
+                                    capture_output=True, text=True, check=True)
+              repos = json.loads(result.stdout)
+              
+              # Filter repos - only include those updated in last 6 months and exclude archived
+              cutoff_date = datetime.now(timezone.utc) - timedelta(days=180)
+              filtered_repos = []
+              
+              for repo in repos:
+                  updated_at = datetime.fromisoformat(repo['updated_at'].replace('Z', '+00:00'))
+                  
+                  # Skip archived repositories and very old ones
+                  if repo.get('archived', False) or updated_at < cutoff_date:
+                      continue
+                      
+                  # Skip repositories that are just forks (unless they have recent activity)
+                  if repo.get('fork', False):
+                      # Only include forks if they have been updated recently (within 30 days)
+                      recent_cutoff = datetime.now(timezone.utc) - timedelta(days=30)
+                      if updated_at < recent_cutoff:
+                          continue
+                  
+                  filtered_repos.append(repo)
+                  if len(filtered_repos) >= 8:
+                      break
+              
+              # Generate markdown for recent repositories section
+              with open('recent_repos.md', 'w') as f:
+                  f.write('## 📚 Recent Repositories\n\n')
+                  
+                  if not filtered_repos:
+                      f.write('*No recently active repositories found.*\n')
+                  else:
+                      for repo in filtered_repos:
+                          name = repo['name']
+                          private = repo['private']
+                          updated_at = datetime.fromisoformat(repo['updated_at'].replace('Z', '+00:00'))
+                          html_url = repo['html_url']
+                          description = repo.get('description', '') or ''
+                          
+                          # Format the date
+                          formatted_date = updated_at.strftime('%b %d, %Y')
+                          
+                          # Add appropriate icons
+                          if private:
+                              privacy_icon = '🔒 '
+                          else:
+                              privacy_icon = ''
+                          
+                          # Add fork indicator if applicable
+                          if repo.get('fork', False):
+                              fork_icon = '🍴 '
+                          else:
+                              fork_icon = ''
+                          
+                          # Use a default description if none provided
+                          if not description:
+                              description = 'No description provided'
+                          
+                          # Truncate description if too long
+                          if len(description) > 80:
+                              description = description[:80] + '...'
+                          
+                          f.write(f'- {privacy_icon}{fork_icon}**[{name}]({html_url})** - {description} *(Updated: {formatted_date})*\n')
+              
+              with open('recent_repos.md', 'r') as f:
+                  content = f.read()
+                  print(content)
+                  if not filtered_repos:
+                      print('No repositories to display')
+                      
+          except subprocess.CalledProcessError as e:
+              print(f'Error fetching repositories with gh CLI: {e}')
+              print(f'stderr: {e.stderr}')
+              # Create a fallback section
+              with open('recent_repos.md', 'w') as f:
+                  f.write('## 📚 Recent Repositories\n\n')
+                  f.write('*Unable to fetch recent repositories at this time.*\n')
+              sys.exit(1)
+          except Exception as e:
+              print(f'Error processing repositories: {e}')
+              # Create a fallback section
+              with open('recent_repos.md', 'w') as f:
+                  f.write('## 📚 Recent Repositories\n\n')
+                  f.write('*Unable to fetch recent repositories at this time.*\n')
+              sys.exit(1)
+          "
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update README with recent repositories
+        run: |
+          python3 -c "
+          import re
+          
+          # Read current README
+          with open('README.md', 'r') as f:
+              content = f.read()
+          
+          # Read the new recent repos section
+          with open('recent_repos.md', 'r') as f:
+              recent_repos = f.read().strip()
+          
+          print('Updating README.md with recent repositories section...')
+          
+          # Pattern to match existing recent repositories section (more flexible)
+          pattern = r'^## 📚 Recent Repositories(?:\r?\n)+.*?(?=\n## |\n<figure|\n<svg|\n!\[|\Z)'
+          
+          if re.search(pattern, content, re.DOTALL):
+              print('Found existing Recent Repositories section - replacing')
+              content = re.sub(pattern, recent_repos, content, flags=re.DOTALL)
+          else:
+              print('No existing Recent Repositories section found - adding new section')
+              # Add new section before the wakatime figure or other content
+              insert_patterns = [
+                  r'(<figure><embed src=\"https://wakatime\.com)',
+                  r'(!\[Metrics\])',
+                  r'(<svg)',
+                  r'(<!-- ### Hi there)'
+              ]
+              
+              inserted = False
+              for pattern_test in insert_patterns:
+                  if re.search(pattern_test, content):
+                      print(f'Inserting before: {pattern_test}')
+                      content = re.sub(pattern_test, f'{recent_repos}\n\n\\1', content, 1)
+                      inserted = True
+                      break
+              
+              if not inserted:
+                  print('No suitable insertion point found - adding at end')
+                  content = content.rstrip() + '\n\n' + recent_repos + '\n'
+          
+          # Write updated README
+          with open('README.md', 'w') as f:
+              f.write(content)
+          
+          print('README.md updated successfully')
+          "
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # Check if there are any changes
+          if git diff --quiet README.md; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          
+          git add README.md
+          git commit -m "🚀 Update recent repositories section [skip ci]"
+          
+          # Try to push with retry logic
+          for i in {1..3}; do
+            if git push; then
+              echo "Successfully pushed changes"
+              break
+            elif [ $i -eq 3 ]; then
+              echo "Failed to push after 3 attempts"
+              exit 1
+            else
+              echo "Push failed, retrying in 10 seconds..."
+              sleep 10
+              git pull --rebase origin $(git branch --show-current)
+            fi
+          done
+          
