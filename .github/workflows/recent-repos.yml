@@ -168,7 +168,7 @@ jobs:
           print('Updating README.md with recent repositories section...')
           
           # Pattern to match existing recent repositories section (more flexible)
-          pattern = r'## 📚 Recent Repositories.*?(?=\n## |\n<figure|\n<svg|\n!\[|\Z)'
+          pattern = r'^## 📚 Recent Repositories(?:\r?\n)+.*?(?=\n## |\n<figure|\n<svg|\n!\[|\Z)'
           
           if re.search(pattern, content, re.DOTALL):
               print('Found existing Recent Repositories section - replacing')
