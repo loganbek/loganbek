@@ -1,7 +1,18 @@
 # Metrics/Stats
 
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/loganbek/loganbek)
-[![Metrics](https://github.com/loganbek/loganbek/actions/workflows/main.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/main.yml)
+[## 📚 Recent Repositories
+
+- **[loganbek](https://github.com/loganbek/loganbek)** - Software Engineer | Implementation Consultant | Technical Writer *(Updated: Jun 19, 2025)*
+- 🔒 **[smc_framework](https://github.com/loganbek/smc_framework)** - No description provided *(Updated: Jun 18, 2025)*
+- **[sentinel-purge](https://github.com/loganbek/sentinel-purge)** - No description provided *(Updated: Jun 18, 2025)*
+- 🍴 **[awesome-markdown-editors](https://github.com/loganbek/awesome-markdown-editors)** - A collection of awesome markdown editors & (pre)viewers for Linux, Apple OS X, M... *(Updated: Jun 18, 2025)*
+- 🔒 **[notes](https://github.com/loganbek/notes)** - No description provided *(Updated: Jun 18, 2025)*
+- 🔒 **[autopwn](https://github.com/loganbek/autopwn)** - No description provided *(Updated: Jun 18, 2025)*
+- 🍴 **[developer-starter](https://github.com/loganbek/developer-starter)** - Developer starter template for Finsweet projects. *(Updated: Jun 18, 2025)*
+- 🍴 **[dotfiles](https://github.com/loganbek/dotfiles)** - :wrench: .files, including ~/.macos — sensible hacker defaults for macOS *(Updated: Jun 17, 2025)*
+
+(https://github.com/loganbek/loganbek/actions/workflows/main.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/main.yml)
 [![CodeQL](https://github.com/loganbek/loganbek/actions/workflows/codeql.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/codeql.yml)
 [![Update Recent Repositories](https://github.com/loganbek/loganbek/actions/workflows/recent-repos.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/recent-repos.yml)
 <!--
