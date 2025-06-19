@@ -86,7 +86,18 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+## 📚 Recent Repositories
+
+- 🔒 **[smc_framework](https://github.com/loganbek/smc_framework)** - A fully automated, cross-platform microtask completion system that concurrently ... *(Updated: Jun 19, 2025)*
+- **[loganbek](https://github.com/loganbek/loganbek)** - Software Engineer | Implementation Consultant | Technical Writer *(Updated: Jun 19, 2025)*
+- **[sentinel-purge](https://github.com/loganbek/sentinel-purge)** - No description provided *(Updated: Jun 18, 2025)*
+- 🍴 **[awesome-markdown-editors](https://github.com/loganbek/awesome-markdown-editors)** - A collection of awesome markdown editors & (pre)viewers for Linux, Apple OS X, M... *(Updated: Jun 18, 2025)*
+- 🔒 **[notes](https://github.com/loganbek/notes)** - No description provided *(Updated: Jun 18, 2025)*
+- 🔒 **[autopwn](https://github.com/loganbek/autopwn)** - No description provided *(Updated: Jun 18, 2025)*
+- 🍴 **[developer-starter](https://github.com/loganbek/developer-starter)** - Developer starter template for Finsweet projects. *(Updated: Jun 18, 2025)*
+- 🍴 **[dotfiles](https://github.com/loganbek/dotfiles)** - :wrench: .files, including ~/.macos — sensible hacker defaults for macOS *(Updated: Jun 17, 2025)*
+
+ width="100" height="100" xmlns="http://www.w3.org/2000/svg">
 <foreignObject width="100" height="100">
     <div xmlns="http://www.w3.org/1999/xhtml">
 <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="loganbek" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/loganbek?trk=profile-badge">Logan Bek</a></div>
