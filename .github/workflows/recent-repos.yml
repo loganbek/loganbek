@@ -61,7 +61,7 @@ jobs:
           
           try:
               # Use GitHub CLI to get recent repositories - this works within firewall constraints
-              result = subprocess.run(['gh', 'api', 'user/repos', '--paginate', '-F', 'sort=updated', '-F', 'per_page=20', '-F', 'affiliation=owner'], 
+              result = subprocess.run(['gh', 'api', 'user/repos?sort=updated&per_page=20&affiliation=owner', '--paginate'],
                                     capture_output=True, text=True, check=True)
               repos = json.loads(result.stdout)
               
