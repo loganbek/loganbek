@@ -2,16 +2,7 @@
 
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/loganbek/loganbek)
 
-## 📚 Recent Repositories
 
-- **[loganbek](https://github.com/loganbek/loganbek)** - Software Engineer | Implementation Consultant | Technical Writer *(Updated: Jun 19, 2025)*
-- 🔒 **[smc_framework](https://github.com/loganbek/smc_framework)** - No description provided *(Updated: Jun 18, 2025)*
-- **[sentinel-purge](https://github.com/loganbek/sentinel-purge)** - No description provided *(Updated: Jun 18, 2025)*
-- 🍴 **[awesome-markdown-editors](https://github.com/loganbek/awesome-markdown-editors)** - A collection of awesome markdown editors & (pre)viewers for Linux, Apple OS X, M... *(Updated: Jun 18, 2025)*
-- 🔒 **[notes](https://github.com/loganbek/notes)** - No description provided *(Updated: Jun 18, 2025)*
-- 🔒 **[autopwn](https://github.com/loganbek/autopwn)** - No description provided *(Updated: Jun 18, 2025)*
-- 🍴 **[developer-starter](https://github.com/loganbek/developer-starter)** - Developer starter template for Finsweet projects. *(Updated: Jun 18, 2025)*
-- 🍴 **[dotfiles](https://github.com/loganbek/dotfiles)** - :wrench: .files, including ~/.macos — sensible hacker defaults for macOS *(Updated: Jun 17, 2025)*
 
 [![GitHub Actions](https://github.com/loganbek/loganbek/actions/workflows/main.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/main.yml)
 [![CodeQL](https://github.com/loganbek/loganbek/actions/workflows/codeql.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/codeql.yml)
@@ -25,16 +16,7 @@
 
 ![GitHub Metrics](https://github.com/loganbek/loganbek/blob/main/github-metrics.svg)
 
-## 📚 Recent Repositories
 
-- **[loganbek](https://github.com/loganbek/loganbek)** - Software Engineer | Implementation Consultant | Technical Writer *(Updated: Jun 19, 2025)*
-- **[sentinel-purge](https://github.com/loganbek/sentinel-purge)** - No description provided *(Updated: Jun 19, 2025)*
-- 🔒 **[smc_framework](https://github.com/loganbek/smc_framework)** - A fully automated, cross-platform microtask completion system that concurrently ... *(Updated: Jun 19, 2025)*
-- 🍴 **[awesome-markdown-editors](https://github.com/loganbek/awesome-markdown-editors)** - A collection of awesome markdown editors & (pre)viewers for Linux, Apple OS X, M... *(Updated: Jun 18, 2025)*
-- 🔒 **[notes](https://github.com/loganbek/notes)** - No description provided *(Updated: Jun 18, 2025)*
-- 🔒 **[autopwn](https://github.com/loganbek/autopwn)** - No description provided *(Updated: Jun 18, 2025)*
-- 🍴 **[developer-starter](https://github.com/loganbek/developer-starter)** - Developer starter template for Finsweet projects. *(Updated: Jun 18, 2025)*
-- 🍴 **[dotfiles](https://github.com/loganbek/dotfiles)** - :wrench: .files, including ~/.macos — sensible hacker defaults for macOS *(Updated: Jun 17, 2025)*
 
  👋 -->
 
@@ -72,49 +54,11 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-## 📚 Recent Repositories
 
-- **[loganbek](https://github.com/loganbek/loganbek)** - Software Engineer | Implementation Consultant | Technical Writer *(Updated: Jun 19, 2025)*
-- **[sentinel-purge](https://github.com/loganbek/sentinel-purge)** - This directory contains configuration files for AI-powered development tools use... *(Updated: Jun 19, 2025)*
-- 🔒 **[autopwn](https://github.com/loganbek/autopwn)** - No description provided *(Updated: Jun 19, 2025)*
-- 🔒 **[smc_framework](https://github.com/loganbek/smc_framework)** - A fully automated, cross-platform microtask completion system that concurrently ... *(Updated: Jun 19, 2025)*
-- 🍴 **[awesome-markdown-editors](https://github.com/loganbek/awesome-markdown-editors)** - A collection of awesome markdown editors & (pre)viewers for Linux, Apple OS X, M... *(Updated: Jun 18, 2025)*
-- 🔒 **[notes](https://github.com/loganbek/notes)** - No description provided *(Updated: Jun 18, 2025)*
-- 🍴 **[developer-starter](https://github.com/loganbek/developer-starter)** - Developer starter template for Finsweet projects. *(Updated: Jun 18, 2025)*
-- 🍴 **[dotfiles](https://github.com/loganbek/dotfiles)** - :wrench: .files, including ~/.macos — sensible hacker defaults for macOS *(Updated: Jun 17, 2025)*
 
-## 📚 Recent Repositories
 
-- 🔒 **[smc_framework](https://github.com/loganbek/smc_framework)** - A fully automated, cross-platform microtask completion system that concurrently ... *(Updated: Jun 19, 2025)*
-- 🔒 **[autopwn](https://github.com/loganbek/autopwn)** - No description provided *(Updated: Jun 19, 2025)*
-- **[loganbek](https://github.com/loganbek/loganbek)** - Software Engineer | Implementation Consultant | Technical Writer *(Updated: Jun 19, 2025)*
-- **[sentinel-purge](https://github.com/loganbek/sentinel-purge)** - This directory contains configuration files for AI-powered development tools use... *(Updated: Jun 19, 2025)*
-- 🍴 **[awesome-markdown-editors](https://github.com/loganbek/awesome-markdown-editors)** - A collection of awesome markdown editors & (pre)viewers for Linux, Apple OS X, M... *(Updated: Jun 18, 2025)*
-- 🔒 **[notes](https://github.com/loganbek/notes)** - No description provided *(Updated: Jun 18, 2025)*
-- 🍴 **[developer-starter](https://github.com/loganbek/developer-starter)** - Developer starter template for Finsweet projects. *(Updated: Jun 18, 2025)*
-- 🍴 **[dotfiles](https://github.com/loganbek/dotfiles)** - :wrench: .files, including ~/.macos — sensible hacker defaults for macOS *(Updated: Jun 17, 2025)*
 
-## 📚 Recent Repositories
 
-- **[loganbek](https://github.com/loganbek/loganbek)** - Software Engineer | Implementation Consultant | Technical Writer *(Updated: Jun 20, 2025)*
-- 🔒 **[smc_framework](https://github.com/loganbek/smc_framework)** - A fully automated, cross-platform microtask completion system that concurrently ... *(Updated: Jun 19, 2025)*
-- 🔒 **[autopwn](https://github.com/loganbek/autopwn)** - No description provided *(Updated: Jun 19, 2025)*
-- **[sentinel-purge](https://github.com/loganbek/sentinel-purge)** - This directory contains configuration files for AI-powered development tools use... *(Updated: Jun 19, 2025)*
-- 🍴 **[awesome-markdown-editors](https://github.com/loganbek/awesome-markdown-editors)** - A collection of awesome markdown editors & (pre)viewers for Linux, Apple OS X, M... *(Updated: Jun 18, 2025)*
-- 🔒 **[notes](https://github.com/loganbek/notes)** - No description provided *(Updated: Jun 18, 2025)*
-- 🍴 **[developer-starter](https://github.com/loganbek/developer-starter)** - Developer starter template for Finsweet projects. *(Updated: Jun 18, 2025)*
-- 🍴 **[dotfiles](https://github.com/loganbek/dotfiles)** - :wrench: .files, including ~/.macos — sensible hacker defaults for macOS *(Updated: Jun 17, 2025)*
-
-## 📚 Recent Repositories
-
-- **[loganbek](https://github.com/loganbek/loganbek)** - Software Engineer | Implementation Consultant | Technical Writer *(Updated: Jun 22, 2025)*
-- 🔒 **[smc_framework](https://github.com/loganbek/smc_framework)** - A fully automated, cross-platform microtask completion system that concurrently ... *(Updated: Jun 19, 2025)*
-- 🔒 **[autopwn](https://github.com/loganbek/autopwn)** - No description provided *(Updated: Jun 19, 2025)*
-- **[sentinel-purge](https://github.com/loganbek/sentinel-purge)** - This directory contains configuration files for AI-powered development tools use... *(Updated: Jun 19, 2025)*
-- 🍴 **[awesome-markdown-editors](https://github.com/loganbek/awesome-markdown-editors)** - A collection of awesome markdown editors & (pre)viewers for Linux, Apple OS X, M... *(Updated: Jun 18, 2025)*
-- 🔒 **[notes](https://github.com/loganbek/notes)** - No description provided *(Updated: Jun 18, 2025)*
-- 🍴 **[developer-starter](https://github.com/loganbek/developer-starter)** - Developer starter template for Finsweet projects. *(Updated: Jun 18, 2025)*
-- 🍴 **[dotfiles](https://github.com/loganbek/dotfiles)** - :wrench: .files, including ~/.macos — sensible hacker defaults for macOS *(Updated: Jun 17, 2025)*
 
 ## 📚 Recent Repositories
 
