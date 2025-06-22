@@ -167,12 +167,54 @@ jobs:
           
           print('Updating README.md with recent repositories section...')
           
-          # Pattern to match existing recent repositories section (more flexible)
-          pattern = r'^## 📚 Recent Repositories(?:\r?\n)+.*?(?=\n## |\n<figure|\n<svg|\n!\[|\Z)'
+          # Check if there are any existing Recent Repositories sections
+          section_header = '## 📚 Recent Repositories'
+          existing_sections = content.count(section_header)
           
-          if re.search(pattern, content, re.DOTALL):
-              print('Found existing Recent Repositories section - replacing')
-              content = re.sub(pattern, recent_repos, content, flags=re.DOTALL)
+          if existing_sections > 0:
+              print(f'Found {existing_sections} existing Recent Repositories section(s) - removing all and replacing with new one')
+              
+              # Simple approach: Split on the section headers and rebuild keeping only the first part
+              parts = content.split(section_header)
+              
+              if len(parts) > 1:
+                  # Keep everything before the first Recent Repositories section
+                  before_sections = parts[0]
+                  
+                  # Look for any content after all the sections that should be preserved
+                  # Check the last part for any non-Recent-Repositories content
+                  after_sections = ''
+                  last_part = parts[-1] if len(parts) > 1 else ''
+                  
+                  # Find content after the repository list in the last section
+                  lines = last_part.split('\n')
+                  past_repo_list = False
+                  preserved_lines = []
+                  
+                  for line in lines:
+                      # Skip repository list items and empty lines at the start
+                      if not past_repo_list and (line.startswith('- ') or line.strip() == ''):
+                          continue
+                      # Once we find a non-repository line, preserve everything after
+                      elif not past_repo_list and line.strip():
+                          past_repo_list = True
+                          preserved_lines.append(line)
+                      elif past_repo_list:
+                          preserved_lines.append(line)
+                  
+                  if preserved_lines:
+                      after_sections = '\n'.join(preserved_lines).strip()
+                  
+                  # Rebuild the content
+                  content = before_sections.rstrip() + '\n\n' + recent_repos
+                  if after_sections:
+                      content += '\n\n' + after_sections
+                  content += '\n'
+              else:
+                  print('Warning: Split operation did not work as expected, using fallback')
+                  # Fallback: Use regex to remove all sections and add new one
+                  content = re.sub(r'^## 📚 Recent Repositories.*?(?=^## |\Z)', '', content, flags=re.DOTALL | re.MULTILINE)
+                  content = content.rstrip() + '\n\n' + recent_repos + '\n'
           else:
               print('No existing Recent Repositories section found - adding new section')
               # Add new section before the wakatime figure or other content
@@ -194,6 +236,10 @@ jobs:
               if not inserted:
                   print('No suitable insertion point found - adding at end')
                   content = content.rstrip() + '\n\n' + recent_repos + '\n'
+          
+          # Verify we now have exactly one section
+          final_count = content.count(section_header)
+          print(f'Final result: {final_count} Recent Repositories section(s)')
           
           # Write updated README
           with open('README.md', 'w') as f:
