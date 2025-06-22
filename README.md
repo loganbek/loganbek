@@ -54,12 +54,6 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-
-
-
-
-
-
 ## 📚 Recent Repositories
 
 - **[loganbek](https://github.com/loganbek/loganbek)** - Software Engineer | Implementation Consultant | Technical Writer *(Updated: Jun 22, 2025)*
