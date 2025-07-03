@@ -1,10 +1,14 @@
-name: Auto-create Issue on Workflow Failure
+# Auto-create Issue on Workflow Failure - DISABLED due to YAML syntax complexity
+# This workflow is disabled to prevent YAML parsing issues with embedded JavaScript
+# Enable manually if you need automatic issue creation on workflow failures
 
-on:
-  workflow_run:
-    workflows: ["Metrics", "CodeQL", "Deploy Jekyll with GitHub Pages dependencies preinstalled", "Test Workflow Failure"]
-    types:
-      - completed
+# name: Auto-create Issue on Workflow Failure
+# 
+# on:
+#   workflow_run:
+#     workflows: ["Metrics", "Deploy Jekyll with GitHub Pages dependencies preinstalled", "Test Workflow Failure"]
+#     types:
+#       - completed
 
 jobs:
   create-issue-on-failure:
