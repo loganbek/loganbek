@@ -5,8 +5,9 @@
 
 
 [![GitHub Actions](https://github.com/loganbek/loganbek/actions/workflows/main.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/main.yml)
-[![CodeQL](https://github.com/loganbek/loganbek/actions/workflows/codeql.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/codeql.yml)
 [![Update Recent Repositories](https://github.com/loganbek/loganbek/actions/workflows/recent-repos.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/recent-repos.yml)
+<!-- CodeQL badge removed - workflow disabled for documentation repository -->
+<!-- [![CodeQL](https://github.com/loganbek/loganbek/actions/workflows/codeql.yml/badge.svg)](https://github.com/loganbek/loganbek/actions/workflows/codeql.yml) -->
 <!--
 [![wakatime](https://wakatime.com/badge/github/loganbek/loganbek.svg)](https://wakatime.com/badge/github/loganbek/loganbek)
 [<img src="https://api.speedtyper.dev/users/loganbek/badges/averagewpm" alt="SpeedTyper.dev avg wpm" height="20">](https://www.speedtyper.dev/profile/loganbek) 
