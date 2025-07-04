@@ -1,0 +1,48 @@
+[
+  {
+    "key": "cmd+alt+h",
+    "command": "workbench.view.scm",
+    "when": "!sideBarFocus || !(activeViewlet == 'workbench.view.scm')"
+  },
+  {
+    "key": "cmd+alt+h",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+  },
+  {
+    "key": "cmd+alt+j",
+    "command": "workbench.panel.markers.view.focus",
+    "when": "!panelVisible || activePanel != 'workbench.panel.markers'"
+  },
+  {
+    "key": "cmd+alt+j",
+    "command": "workbench.action.togglePanel",
+    "when": "panelVisible && activePanel == 'workbench.panel.markers'"
+  },
+  {
+    "key": "cmd+alt+k",
+    "command": "workbench.debug.action.focusRepl",
+    "when": "!panelVisible || activePanel != 'workbench.panel.repl'"
+  },
+  {
+    "key": "cmd+alt+k",
+    "command": "workbench.action.togglePanel",
+    "when": "panelVisible && activePanel == 'workbench.panel.repl'"
+  },
+  {
+    "key": "cmd+alt+l",
+    "command": "workbench.action.terminal.focus",
+    "when": "!panelVisible || activePanel != 'terminal'"
+  },
+  {
+    "key": "cmd+alt+l",
+    "command": "workbench.action.togglePanel",
+    "when": "panelVisible && activePanel == 'terminal'"
+  },
+  {
+    "key": "cmd+alt+;",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  }
+]
+
+
