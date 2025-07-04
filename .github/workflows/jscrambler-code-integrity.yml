@@ -28,12 +28,30 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
+      
+      # Check if this is a JavaScript project before proceeding
+      - name: Check for package.json
+        id: check-package
+        run: |
+          if [ -f "package.json" ]; then
+            echo "has_package=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_package=false" >> $GITHUB_OUTPUT
+            echo "No package.json found - skipping JavaScript protection"
+          fi
+      
       - uses: actions/setup-node@v4
+        if: steps.check-package.outputs.has_package == 'true'
         with:
           node-version: 18
+          
       - run: npm ci
+        if: steps.check-package.outputs.has_package == 'true'
+        
       - run: npm run build
+        if: steps.check-package.outputs.has_package == 'true'
       - name: Jscrambler Code Integrity
+        if: steps.check-package.outputs.has_package == 'true'
         id: jscrambler
         # the complete list of inputs can be found here: https://github.com/marketplace/actions/jscrambler#inputs
         uses: jscrambler/code-integrity-actions/protect@848fb3ce052c24843a94ab847e9ba8a1fd1b37a6
