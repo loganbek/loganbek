@@ -54,7 +54,7 @@ jobs:
         if: steps.check-package.outputs.has_package == 'true'
         id: jscrambler
         # the complete list of inputs can be found here: https://github.com/marketplace/actions/jscrambler#inputs
-        uses: jscrambler/code-integrity-actions/protect@848fb3ce052c24843a94ab847e9ba8a1fd1b37a6
+        uses: jscrambler/code-integrity-actions/protect@1d9ffdaddd0194583839e92a4f9a185e617a03f7
         with:
           application-id: ${{ secrets.JSCRAMBLER_APPLICATION_ID }}  # This value should be created within your Jscrambler account
           secret-key: ${{ secrets.JSCRAMBLER_SECRET_KEY }}          # This value can be found in your Jscrambler account
