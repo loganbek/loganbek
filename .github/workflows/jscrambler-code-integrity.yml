@@ -27,7 +27,7 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       
       # Check if this is a JavaScript project before proceeding
       - name: Check for package.json
